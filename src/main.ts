@@ -19,7 +19,6 @@ app.post('/', async (req, res, next) => {
     const keys: Array<string> = [];
 
     const crawler = new PlaywrightCrawler({
-        maxRequestsPerCrawl: 10,
         async requestHandler({ page, request /*, enqueueLinks*/ }) {
             // await enqueueLinks({
             //      strategy: 'same-hostname',
